@@ -1,0 +1,34 @@
+{
+  "heizung": [
+    {
+      "id": "1",
+      "name": "Außentemperatur",
+      "values": "7.4",
+      "unit": "°C"
+    },
+    {
+      "id": "2",
+      "name": "Modus",
+      "values": "Auto",
+      "unit": ""
+    },
+    {
+      "id": "3",
+      "name": "Brennerstunden",
+      "values": "1234",
+      "unit": "h"
+    },
+    {
+      "id": "4",
+      "name": "Brennerstarts",
+      "values": "456",
+      "unit": ""
+    },
+    {
+      "id": "5",
+      "name": "Stand",
+      "values": "27.03.2025 11:02",
+      "unit": ""
+    }
+  ]
+}
