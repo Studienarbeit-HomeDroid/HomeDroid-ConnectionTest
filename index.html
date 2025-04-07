@@ -174,28 +174,57 @@ function docalc()
 </form>
 <br>
 
-<!-- hier fängt der relevante smarthome-teil an -->
-
-<div class="flex-container">
-  <div class="c1">Gesamtstatus vom <span id="TIMESTAMP">01-10-2024 20:50:46</span>
-<table border="1" data-annotation="dashboard">
-<!--
-<tr><td>Tag/Nacht<td>Tag</tr>
-<tr><td>Anwesend<td>0|1</tr>
--->
-<tr><td>Haust&uuml;r<td><div id="EingangTR1"><img src="/sh/icons/open.png" width="64" height="64"></div></tr>
-<tr><td>Unverriegelte Fenster<td><div id="OpenWindows"></div></tr>
-<tr><td>Offene T&uuml;ren<td><div id="OpenDoors">5</div></tr>
-<tr><td>Nicht verriegelte T&uuml;ren<td><div id="UnlockedDoors"></div></tr>
-<tr><td>Strombezug<button onclick="RefreshDevices('','StromP');">&#8635;</button><td><div id="StromP">-</div></tr>
-<tr><td>Stromlieferung<button onclick="RefreshDevices('','StromPL');">&#8635;</button><td><div id="StromPL">-</div></tr>
-<tr><td>Stromz&auml;hlerstand Bezug<button onclick="RefreshDevices('','StromKWH');">&#8635;</button><td><div id="StromKWH">-</div></tr>
-<tr><td>Stromz&auml;hlerstand Lieferung<button onclick="RefreshDevices('','StromKWHL');">&#8635;</button><td><div id="StromKWHL">-</div></tr>
-<tr><td>Solar Leistung<td><div id="SolarLeistung">-</div></tr>
-<tr><td>Solar Tagesertrag<td><div id="SolarTagesertrag">-</div></tr>
-<tr><td>Solar Gesamtertrag<td><div id="SolarGesamtertrag">-</div></tr>
-</table>
-</div>
+<table border="1">
+    <tr>
+      <td data-annotation="dashboard">Haustür</td>
+      <td><div id="EingangTR1">offen</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Unverriegelte Fenster</td>
+      <td><div id="OpenWindows">2</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Offene Türen</td>
+      <td><div id="OpenDoors">5</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Nicht verriegelte Türen</td>
+      <td><div id="UnlockedDoors">3</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Strombezug</td>
+      <td><div id="StromP">1200</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Stromlieferung</td>
+      <td><div id="StromPL">950</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Zählerstand Bezug</td>
+      <td><div id="StromKWH">18542</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Zählerstand Lieferung</td>
+      <td><div id="StromKWHL">9231</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Solar Tagesertrag</td>
+      <td><div id="SolarTagesertrag">4.8</div></td>
+    </tr>
+  
+    <tr>
+      <td data-annotation="dashboard">Solar Gesamtertrag</td>
+      <td><div id="SolarGesamtertrag">923.6</div></td>
+    </tr>
+  </table>
 
 <div class="c2">Wetter
    <div id="wcom-14437e89daabd7befdf92e1b5b1b4491" style="border: 1px solid #CCC; background-color: #FCFCFC; border-radius: 5px" class="wcom-default w300x250"><link rel="stylesheet" href="//cs3.wettercomassets.com/woys/5/css/w.css" media="all"><div class="wcom-city"><a style="color: #000" href="https://www.wetter.com/deutschland/ettlingen/bruchhausen/DE0002761001.html" target="_blank" rel="nofollow" aria-label="Wetter Berlin" title="Wetter Bruchhausen">Wetter Bruchhausen</a></div><div id="wcom-14437e89daabd7befdf92e1b5b1b4491-weather"></div><script type="text/javascript" src="//cs3.wettercomassets.com/woys/5/js/w.js"></script><script type="text/javascript">_wcomWidget({id: 'wcom-14437e89daabd7befdf92e1b5b1b4491',location: 'DE0002761001',format: '300x250',type: 'spaces'});</script></div>
@@ -247,9 +276,30 @@ Garten<button onclick="RefreshDevices('Garten','');">&#8635;</button>
 </div> <!-- Garten -->
 
 <div class="c4" data-annotation="group" data-info="warm">
-<a href="/sh/visu/heizung/temp_aussen.php">Heizung</A><table border="1"><tr><td class="tc1" data-annotation="statusdevice" >Stand<td><div id="HZ_DT">-</div></tr><tr><td data-annotation="statusdevice">Modus<td><div id="HZ_MODUS">-</div></tr><tr><td data-annotation="statusdevice">Brenner h<td><div id="HZ_BRENNERH">-</div></tr><tr><td data-annotation="statusdevice">Brennerstarts<td><div id="HZ_BRENNERS">-</div></tr></table>
-</div>
-</div> <!--Container -->
+    <a href="/sh/visu/heizung/temp_aussen.php">Heizung</a>
+  
+    <table border="1">
+      <tr>
+        <td data-annotation="heizung">Außentemperatur</td>
+        <td><div id="HZ_DT">7.4</div></td>
+      </tr>
+  
+      <tr>
+        <td data-annotation="heizung">Modus</td>
+        <td><div id="HZ_MODUS">Auto</div></td>
+      </tr>
+  
+      <tr>
+        <td data-annotation="heizung">Brennerstunden</td>
+        <td><div id="HZ_BRENNERH">1234</div></td>
+      </tr>
+  
+      <tr>
+        <td data-annotation="heizung">Brennerstarts</td>
+        <td><div id="HZ_BRENNERS">40</div></td>
+      </tr>
+    </table>
+  </div><!--Container -->
 
 <div class="flex-container">
 <div class="c1" data-annotation="group" data-info="floor">
